@@ -11,12 +11,12 @@ import Control.Concurrent (threadDelay)
 watch :: FilePath -> IO a -> IO ()
 watch filename action = do
   action
-  last_modified <- getModificationTime filename
-  watch' last_modified
+  lastModified <- getModificationTime filename
+  watch' lastModified
     where
-      watch' last_modified = do
+      watch' lastModified = do
                           current <- getModificationTime filename
-                          when (current /= last_modified) performAction
+                          when (current /= lastModified) performAction
                           -- Sleep while n micro seconds
                           threadDelay (1 * 1000 * 1000)
                           watch' current
