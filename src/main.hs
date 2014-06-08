@@ -2,13 +2,14 @@ module Main where
 
 
 import System.Cmd (system)
+import System.Exit (ExitCode)
 import System.Environment (getArgs)
 
 
 import WatchFile (watch)
 
 
-main :: IO ()
+main :: IO ExitCode
 main = do
   args <- getArgs
   let filename = head args

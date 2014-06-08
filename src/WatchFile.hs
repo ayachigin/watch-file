@@ -8,7 +8,7 @@ import Control.Monad (when)
 import Control.Concurrent (threadDelay)
 
 -- Execute io-action when watching file modified.
-watch :: FilePath -> IO a -> IO ()
+watch :: FilePath -> IO a -> IO a
 watch filename action = do
   action
   lastModified <- getModificationTime filename
