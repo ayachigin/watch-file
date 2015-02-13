@@ -2,7 +2,7 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 name:                watch-file
-version:             0.1.0.1
+version:             0.1.2.0
 -- synopsis:
 -- description:
 license:             BSD3
@@ -19,7 +19,7 @@ executable watch-file
   main-is: main.hs
   -- other-modules:
   -- other-extensions:
-  build-depends:       base >=4.6 && <4.8, directory >=1.2 && <1.3, process >=1.1 && <1.3
+  build-depends:       base >=4.6 && <4.8, process >= 1.2.0.0 && < 1.3.0.0, directory >= 1.2.1.0, filepath >= 1.3.0.2, time >= 1.4.2
   hs-source-dirs:      src
   default-language:    Haskell2010
 
@@ -27,6 +27,6 @@ library
   exposed-modules:     WatchFile
   -- other-modules:
   -- other-extensions:
-  build-depends:       base >=4.6 && <4.8, directory >=1.2 && <1.3, process >=1.1 && <1.3
+  build-depends:       base >=4.6 && <4.8, directory >= 1.2.1.0, filepath >= 1.3.0.2, time >= 1.4.2
   hs-source-dirs:      src
   default-language:    Haskell2010

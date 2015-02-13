@@ -1,7 +1,7 @@
 module Main where
 
 
-import System.Cmd (system)
+import System.Process (system)
 import System.Exit (ExitCode)
 import System.Environment (getArgs)
 
@@ -9,7 +9,7 @@ import System.Environment (getArgs)
 import WatchFile (watch)
 
 
-main :: IO ExitCode
+main :: IO ()
 main = do
   args <- getArgs
   let filename = head args
